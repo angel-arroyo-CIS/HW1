@@ -1,12 +1,29 @@
-print('Enter integer:')
-userNum = int(input())
+print('Enter amount of lemon juice (in cups):')
+LemonJuice = float(input())
 
-userNumSquared = userNum * userNum # Bug here; fix it when instructed
+print('Enter amount of water (in cups):')
+Water = float(input())
 
-print('You entered:', userNum) # Output formatting issue here; fix it when instructed2
-print(userNum, 'squared is', userNumSquared)
-print('And', userNum, 'cubed is', (userNumSquared*userNum), '!!')
-print('Enter another integer:')
-user_num1 = int(input())
-print(userNum, '+' , user_num1, 'is', userNum+user_num1)
-print(userNum, '*' , user_num1, 'is', userNum*user_num1)
+print('Enter amount of agave nectar (in cups):')
+AgaveNectar = float(input())
+
+print('How many servings does this make?')
+Servings = float(input())
+
+
+print('\nLemonade ingredients - yields', '{:.2f}'.format(Servings), 'servings')
+print('{:.2f}'.format(LemonJuice), 'cup(s) lemon juice')
+print('{:.2f}'.format(Water), 'cup(s) water')
+print('{:.2f}'.format(AgaveNectar), 'cup(s) agave nectar')
+
+print('\nHow many servings would you like to make?')
+Servings2 = float(input())
+print('\nLemonade ingredients - yields', '{:.2f}'.format(Servings2), 'servings')
+print('{:.2f}'.format(LemonJuice*(Servings2/Servings)), 'cup(s) lemon juice')
+print('{:.2f}'.format(Water*(Servings2/Servings)), 'cup(s) water')
+print('{:.2f}'.format(AgaveNectar*(Servings2/Servings)), 'cup(s) agave nectar')
+
+print('\nLemonade ingredients - yields', '{:.2f}'.format(Servings2), 'servings')
+print('{:.2f}'.format((LemonJuice*(Servings2/Servings))/16), 'gallon(s) lemon juice')
+print('{:.2f}'.format((Water*(Servings2/Servings))/16), 'gallon(s) water')
+print('{:.2f}'.format((AgaveNectar*(Servings2/Servings))/16), 'gallon(s) agave nectar')
